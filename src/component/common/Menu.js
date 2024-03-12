@@ -17,6 +17,9 @@ function Menu(props){
                         <NavLink to={"/category"} className="nav-link">Category</NavLink>
                     </li>
                     <li class="nav-item">
+                        <NavLink to={"/product"} className="nav-link">Product</NavLink>
+                    </li>
+                    <li class="nav-item">
                     <NavLink to={"/cart"} className="nav-link">Cart</NavLink>
                     </li>
                 </ul>

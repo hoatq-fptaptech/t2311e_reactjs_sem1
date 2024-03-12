@@ -6,25 +6,9 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './component/page/Home';
 import Category from './component/page/Category';
 import Cart from './component/page/Cart';
+import ProductDetail from './component/page/ProductDetail';
 
 function App() { // jsx
-  const ps = [
-    {
-      name: "Iphone 15 Pro Max",
-      price: 1200,
-      qty: 1
-    },
-    {
-      name: "Iphone 14 Pro Max",
-      price: 1100,
-      qty: 10
-    },
-    {
-      name: "Iphone 13",
-      price: 800,
-      qty: 0
-    }
-  ];
   return (
     <div className="App">
       <Menu/>
@@ -32,6 +16,7 @@ function App() { // jsx
           <Routes>
               <Route path='/' Component={Home} />
               <Route path='/category' Component={Category} />
+              <Route path='/product' Component={ProductDetail} />
               <Route path='/cart' Component={Cart} />
           </Routes>
        </section>
