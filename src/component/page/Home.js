@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Product from "../common/Product";
 import { Col, Container, Row } from "react-bootstrap";
 import ProductCard from "../common/ProductCard";
+import Slider from "../common/Slider";
 
 function Home(props){
     const [list,setList] = useState([]);
@@ -15,7 +15,14 @@ function Home(props){
     useEffect(function(){
         callData();
     },[]);
+    
     return (
+        <>
+        <section>
+            <Container>
+                <Slider/>
+            </Container>
+        </section>
         <section>
             <Container>
              <h1>Product Listing</h1>
@@ -30,6 +37,7 @@ function Home(props){
              </Row>
             </Container>
         </section>
+        </>
     );
 }
 export default Home;
