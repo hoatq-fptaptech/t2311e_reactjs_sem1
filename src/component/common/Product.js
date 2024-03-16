@@ -7,6 +7,9 @@ function Product(props){ // component
         setCart([...cart,item]);
         // cart.push(item)
         // setCart(cart);
+        // kiểm tra sp đã có trong mảng chưa
+        // nếu có rồi tăng số lượng mua
+        // nếu chưa có thì thêm vào mảng với số lượng mua là 1
     }
     return (
         <div className="col-4">
