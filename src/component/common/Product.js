@@ -1,19 +1,21 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import Context from "../../context/context";
 function Product(props){ // component
     const item = props.item;
-    const [count,setCount] = useState(0);
-    function increment(){
-        setCount(count+1);
-        // setCount(count>0?count-1:0);
+    const {cart,setCart} = useContext(Context);
+    function addToCart(){
+        setCart([...cart,item]);
+        // cart.push(item)
+        // setCart(cart);
     }
     return (
         <div className="col-4">
+            <h1>Số sản phẩm trong giỏ hàng: {cart.length}</h1>
             <img src={item.thumbnail} />
             <h2>{item.title}</h2>
             <p>${item.price}</p>
             <p>{item.qty > 0 ? "In stock": "Out of stock"}</p>
-            <h2>Count: {count}</h2>
-            <button onClick={increment} className="btn btn-primary" type="button">Increment</button>
+            <button onClick={addToCart} className="btn btn-primary" type="button">Add to cart</button>
         </div>
     );
 }
