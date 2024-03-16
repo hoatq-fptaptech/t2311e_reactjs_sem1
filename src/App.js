@@ -10,8 +10,9 @@ import { ContextProvider } from './context/context';
 
 function App() { // jsx
   const [cart,setCart] = useState([]);
+  const [favourite,setFavourite] = useState([]);
   return (
-    <ContextProvider value={{cart,setCart}}>
+    <ContextProvider value={{cart,setCart,favourite,setFavourite}}>
     <div className="App">
       <Menu/>
       <section className='main'>
